@@ -15,8 +15,9 @@ class QuizBrain:
         self.question_number += 1
         # this is to display the escaped html chars
         q_text = html.unescape(self.current_question.text)
-        user_answer = input(f"Q.{self.question_number}: {q_text} (True/False): ")
-        self.check_answer(user_answer)
+        return f"Q.{self.question_number}: {q_text}"
+        # user_answer = input(f"Q.{self.question_number}: {q_text} (True/False): ")
+        # self.check_answer(user_answer)
 
     def check_answer(self, user_answer):
         correct_answer = self.current_question.answer
